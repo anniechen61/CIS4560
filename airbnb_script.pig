@@ -143,6 +143,8 @@ lareviews::date,
 lareviews::reviewer_id,
 lareviews::reviewer_name;
 
+dump lacleaned;
+
 --Store lacleaned into correct directory and download the file using sftp.
 store lacleaned INTO 'airbnb/la/lajoined' USING PigStorage(',');
 
@@ -162,6 +164,9 @@ sfnew_listings::reviews_per_month,
 sfreviews::date, 
 sfreviews::reviewer_id,
 sfreviews::reviewer_name;
+
+dump sfcleaned;
+
 
 --Store sfcleaned into correct directory and download the file using sftp.
 
